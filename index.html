@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Sin Estrés | ¡Nunca más te preocupes por el menú de la semana!</title>
+  <meta name="description" content="52 menús semanales completos con listas de la compra para todo el año. Descarga y cocina sin estrés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2e7d32;
+      --green-light: #43a047;
+      --green-dark: #1b5e20;
+      --yellow: #f9a825;
+      --yellow-light: #fdd835;
+      --red: #c62828;
+      --gray-bg: #f5f5f5;
+      --white: #ffffff;
+      --text-dark: #1a1a1a;
+      --text-mid: #444;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── UTILITIES ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .text-center { text-align: center; }
+    .text-upper { text-transform: uppercase; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--green-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #388e3c 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px 50px;
+    }
+
+    .hero .tag {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--green-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 span {
+      color: var(--yellow-light);
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      opacity: 0.92;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--green-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      padding: 18px 44px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    }
+
+    .btn-main.big {
+      padding: 22px 56px;
+      font-size: clamp(1.1rem, 2.8vw, 1.35rem);
+    }
+
+    .btn-sub {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      opacity: 0.75;
+      font-style: italic;
+    }
+
+    /* ── SECTIONS GENERAL ── */
+    section {
+      padding: 64px 20px;
+    }
+
+    section.alt {
+      background: var(--gray-bg);
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-title span { color: var(--green); }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── PROBLEM ── */
+    .problem-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 36px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--white);
+      border-left: 4px solid var(--red);
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .problem-list li .icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-top: 4px solid var(--green);
+    }
+
+    .step-number {
+      width: 52px;
+      height: 52px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      margin: 0 auto 18px;
+    }
+
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+    }
+
+    /* ── DELIVERABLES ── */
+    .deliverables {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 40px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .deliverable-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 22px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    }
+
+    .deliverable-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+
+    .deliverable-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--green-dark);
+    }
+
+    .deliverable-card p {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+    }
+
+    /* ── FOR WHO ── */
+    .checklist {
+      list-style: none;
+      max-width: 600px;
+      margin: 36px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.02rem;
+      background: var(--white);
+      padding: 14px 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .check-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* ── PRICING ── */
+    .pricing-section {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .pricing-section .section-title span { color: var(--yellow-light); }
+
+    .pricing-box {
+      background: var(--white);
+      color: var(--text-dark);
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 480px;
+      margin: 36px auto 0;
+      box-shadow: 0 12px 50px rgba(0,0,0,0.25);
+    }
+
+    .pricing-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .price-original {
+      font-size: 1rem;
+      color: #999;
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .price-main {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 3.6rem;
+      color: var(--green-dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .price-main sup {
+      font-size: 1.8rem;
+      vertical-align: super;
+    }
+
+    .price-installments {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      margin-bottom: 28px;
+    }
+
+    .pricing-box .btn-main {
+      width: 100%;
+      text-align: center;
+    }
+
+    .secure-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* ── GUARANTEE ── */
+    .guarantee-box {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 3px solid var(--green);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .guarantee-icon {
+      font-size: 4rem;
+      flex-shrink: 0;
+    }
+
+    .guarantee-box h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+    }
+
+    .guarantee-box p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+    }
+
+    @media (max-width: 500px) {
+      .guarantee-box { flex-direction: column; text-align: center; }
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      max-width: 680px;
+      margin: 36px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .faq-item h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .faq-item h4::before {
+      content: '?';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .faq-item p {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      padding-left: 34px;
+    }
+
+    /* ── ABOUT ── */
+    .about-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-box .number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.4rem;
+      color: var(--green);
+    }
+
+    .stat-box .label {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .final-cta .section-title { color: var(--white); }
+    .final-cta .section-title span { color: var(--yellow-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 36px 20px;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    footer a { color: #ccc; text-decoration: underline; }
+
+    /* ── STICKY BAR ── */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--green-dark);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 14px 20px;
+      z-index: 999;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+      flex-wrap: wrap;
+    }
+
+    .sticky-bar p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .sticky-bar .btn-main {
+      padding: 12px 30px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      .sticky-bar { flex-direction: column; gap: 10px; }
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 60px;
+      height: 4px;
+      background: var(--green);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    /* pulse animation for CTA */
+    @keyframes pulse {
+      0% { box-shadow: 0 8px 30px rgba(249,168,37,0.4); }
+      50% { box-shadow: 0 8px 50px rgba(249,168,37,0.7); }
+      100% { box-shadow: 0 8px 30px rgba(249,168,37,0.4); }
+    }
+
+    .btn-pulse { animation: pulse 2s infinite; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    🔒 &nbsp;Pago 100% seguro &nbsp;·&nbsp; Acceso inmediato &nbsp;·&nbsp; Garantía de 30 días
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="tag">✨ Oferta exclusiva — Solo hoy</div>
+      <h1>
+        ¿Qué hacemos hoy de comer?<br />
+        <span>Nunca fue tan fácil de responder.</span>
+      </h1>
+      <p class="subtitle">
+        Descarga 52 menús semanales completos con listas de la compra para todo el año y cocina sin estrés, sin improvisar y sin repetir siempre lo mismo.
+      </p>
+      <a href="#comprar" class="btn-main big btn-pulse">
+        Quiero mi Menú Sin Estrés
+      </a>
+      <span class="btn-sub">Acceso inmediato · Válido para siempre · Sin suscripción</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROBLEM
+  ══════════════════════════════════ -->
+  <section class="alt" id="problema">
+    <div class="container text-center">
+      <span class="section-label">El problema</span>
+      <h2 class="section-title">Todos los días lo mismo:<br /><span>¿Qué hacemos hoy de comer?</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc" style="margin-top:20px;">
+        Esta pregunta parece sencilla, pero genera un estrés diario que acaba con tu energía y creatividad en la cocina.
+      </p>
+      <ul class="problem-list">
+        <li>
+          <span class="icon">😩</span>
+          <span>Llegas a casa agotada y tienes que <strong>improvisar</strong> algo con lo que hay en la nevera.</span>
+        </li>
+        <li>
+          <span class="icon">🔁</span>
+          <span>Siempre acabas haciendo <strong>los mismos platos</strong> porque no se te ocurre nada más.</span>
+        </li>
+        <li>
+          <span class="icon">🛒</span>
+          <span>Vas al supermercado sin planificar y <strong>gastas de más</strong> comprando cosas que luego no usas.</span>
+        </li>
+        <li>
+          <span class="icon">⏰</span>
+          <span>Pierdes tiempo cada día pensando qué cocinar, en lugar de <strong>simplemente cocinar</strong>.</span>
+        </li>
+        <li>
+          <span class="icon">😤</span>
+          <span>La raíz del problema: no tienes un <strong>plan de menús listo</strong> para seguir.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SOLUTION / HOW IT WORKS
+  ══════════════════════════════════ -->
+  <section id="como-funciona">
+    <div class="container text-center">
+      <span class="section-label">La solución</span>
+      <h2 class="section-title">Solo <span>3 pasos</span> y ya tienes la semana resuelta</h2>
+      <div class="divider"></div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Accede al menú semanal</h3>
+          <p>Desde el móvil, el ordenador o la tablet. También puedes imprimirlo y colgarlo en la nevera.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Haz la compra de la semana</h3>
+          <p>Sigue la lista de la compra precalculada y compra de una sola vez todo lo que necesitas.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Cocina con la receta en mano</h3>
+          <p>Sigue las instrucciones paso a paso con mise en place, elaboración, acabado y emplatado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       DELIVERABLES
+  ══════════════════════════════════ -->
+  <section class="alt" id="contenido">
+    <div class="container text-center">
+      <span class="section-label">¿Qué incluye?</span>
+      <h2 class="section-title">Todo lo que necesitas para<br /><span>cocinar sin estrés todo el año</span></h2>
+      <div class="divider"></div>
+      <div class="deliverables">
+
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📅</div>
+          <div>
+            <h3>52 menús semanales completos</h3>
+            <p>Cada mes recibes 4 menús nuevos con las comidas de lunes a viernes. Personaliza, imprime y archiva en una carpeta.</p>
+          </div>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🛒</div>
+          <div>
+            <h3>Lista de la compra semanal</h3>
+            <p>Los ingredientes ya están calculados para toda la semana, organizados por día. Una sola visita al supermercado, sin olvidos.</p>
+          </div>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔄</div>
+          <div>
+            <h3>Sustituciones de ingredientes</h3>
+            <p>3 opciones distintas para cada ingrediente. Adapta el menú a los gustos de tu familia o aprovecha las ofertas del mercado.</p>
+          </div>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-icon">👩‍🍳</div>
+          <div>
+            <h3>Recetas detalladas paso a paso</h3>
+            <p>Más de 780 recetas con mise en place, elaboración, acabado y emplatado. Perfectas tanto para principiantes como para cocineros con experiencia.</p>
+          </div>
+        </div>
+
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🥗</div>
+          <div>
+            <h3>5 perfiles alimentarios incluidos</h3>
+            <p>Saludable, sin gluten, sin lactosa, vegano y vegetariano. Todos los menús incluyen las 5 variantes para que cada miembro de la familia coma lo que necesita.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOR WHO
+  ══════════════════════════════════ -->
+  <section id="para-quien">
+    <div class="container text-center">
+      <span class="section-label">¿Es para mí?</span>
+      <h2 class="section-title">Este producto es para ti si<br /><span>te identificas con al menos 2 de estos puntos</span></h2>
+      <div class="divider"></div>
+      <ul class="checklist">
+        <li>
+          <span class="check-icon">✓</span>
+          Estás harta de agobiarte cada día pensando qué cocinar
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          Quieres más variedad en la mesa sin tener que inventarte nada
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          Buscas llegar a la cocina sabiendo exactamente qué vas a preparar
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          No quieres depender de lo que "caiga" en la nevera al final del día
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          Deseas tener toda la semana —y todo el año— planificada y lista
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PRICING
+  ══════════════════════════════════ -->
+  <section class="pricing-section" id="comprar">
+    <div class="container text-center">
+      <span class="section-label" style="background:var(--yellow);color:var(--green-dark);">Oferta exclusiva</span>
+      <h2 class="section-title" style="color:var(--white);">Un año entero de menús por<br /><span>menos de lo que te gastas en un café</span></h2>
+      <div class="divider" style="background:var(--yellow-light);"></div>
+
+      <div class="pricing-box">
+        <div class="pricing-badge">⚠️ Oferta solo hoy</div>
+        <p class="price-original">Valor normal: 97€</p>
+        <p class="price-main"><sup>€</sup>12<sup style="font-size:1.4rem;">,90</sup></p>
+        <p class="price-installments">O en <strong>9 cuotas de 1,57 €</strong> sin intereses</p>
+
+        <a href="#" class="btn-main btn-pulse" style="display:block;text-align:center;">
+          🛒 &nbsp;Quiero el Menú Sin Estrés ahora
+        </a>
+        <span class="btn-sub" style="display:block;margin-top:10px;font-size:0.8rem;color:#888;">
+          Pago seguro · Acceso inmediato · Sin suscripción
+        </span>
+
+        <div class="secure-badges">
+          <div class="secure-badge">🔒 Pago cifrado SSL</div>
+          <div class="secure-badge">✅ Acceso inmediato</div>
+          <div class="secure-badge">📧 Entrega por e-mail</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ACCESS PROCESS
+  ══════════════════════════════════ -->
+  <section class="alt" id="acceso">
+    <div class="container text-center">
+      <span class="section-label">¿Cómo accedo?</span>
+      <h2 class="section-title">Acceso <span>inmediato</span> en 2 pasos</h2>
+      <div class="divider"></div>
+      <div class="steps" style="margin-top:36px;">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Recibe el e-mail de acceso</h3>
+          <p>En cuanto completes el pago, recibirás un correo con tu enlace de acceso. Haz clic y entra al instante.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Úsalo donde quieras</h3>
+          <p>Accede desde el móvil, la tablet o el ordenador. Puedes imprimir los menús y recetas cuando quieras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       GUARANTEE
+  ══════════════════════════════════ -->
+  <section id="garantia">
+    <div class="container text-center">
+      <span class="section-label">Sin riesgo</span>
+      <h2 class="section-title">Garantía de <span>satisfacción total</span></h2>
+      <div class="divider"></div>
+      <div class="guarantee-box" style="margin-top:36px;">
+        <div class="guarantee-icon">🛡️</div>
+        <div>
+          <h3>30 días de garantía sin preguntas</h3>
+          <p>
+            Si en los próximos 30 días no quedas satisfecha con el Menú Sin Estrés, te devolvemos el 100% de tu dinero. Sin burocracia, sin complicaciones. La decisión es tuya, el riesgo es nuestro.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <section class="alt" id="nosotros">
+    <div class="container text-center">
+      <span class="section-label">¿Quiénes somos?</span>
+      <h2 class="section-title">Más de una década ayudando a<br /><span>comer mejor sin complicaciones</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc" style="margin-top:20px;">
+        Desde 2016 desarrollamos soluciones prácticas y accesibles para que comer bien no sea un quebradero de cabeza. Nuestros menús, cursos y herramientas ya han llegado a miles de hogares en más de 50 países.
+      </p>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="number">+51.000</div>
+          <div class="label">personas satisfechas</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">+50</div>
+          <div class="label">países de alcance</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">+780</div>
+          <div class="label">recetas incluidas</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">Desde 2016</div>
+          <div class="label">en la cocina contigo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FAQ
+  ══════════════════════════════════ -->
+  <section id="faq">
+    <div class="container text-center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2 class="section-title">Resolvemos tus <span>dudas</span></h2>
+      <div class="divider"></div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <h4>¿Es seguro el pago?</h4>
+          <p>Sí. Utilizamos plataformas de pago certificadas con cifrado SSL avanzado. Tus datos personales y bancarios están completamente protegidos en todo momento.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Las recetas son rápidas y con ingredientes fáciles de encontrar?</h4>
+          <p>Absolutamente. Todas las recetas están pensadas para el día a día, con ingredientes de cualquier supermercado. Además, incluimos sustituciones para que puedas adaptar cada plato a lo que tengas en casa.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Puedo imprimirlo?</h4>
+          <p>Sí, todos los menús y las más de 780 recetas son 100% imprimibles. Puedes encuadernarlos en una carpeta y tenerlos siempre a mano en la cocina.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Qué incluye exactamente cada menú semanal?</h4>
+          <p>Cada menú incluye: el plan de comidas de lunes a viernes, la lista de la compra diaria, la lista de la compra semanal agrupada, sustituciones de ingredientes (versión general, vegana, vegetariana, sin gluten y sin lactosa) y recetas detalladas con mise en place, elaboración y emplatado.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Funciona para familias con diferentes preferencias o intolerancias?</h4>
+          <p>Sí. Cada menú incluye 5 perfiles alimentarios: saludable, sin gluten, sin lactosa, vegano y vegetariano. Toda la familia puede comer bien aunque tenga necesidades distintas.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Cuándo recibo el acceso?</h4>
+          <p>De forma inmediata. En cuanto se confirme el pago, recibirás un correo electrónico con tu enlace de acceso. Sin esperas.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FINAL CTA
+  ══════════════════════════════════ -->
+  <section class="final-cta">
+    <div class="container text-center">
+      <h2 class="section-title">
+        Deja de improvisar.<br />
+        <span>Empieza a cocinar con un plan.</span>
+      </h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.85);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;">
+        Un año entero de menús, listas de la compra y recetas por un precio que no notarás. Sin estrés, sin repeticiones, sin volver a preguntarte qué hacemos hoy de comer.
+      </p>
+      <div style="margin-top:36px;">
+        <a href="#comprar" class="btn-main big btn-pulse">
+          🍽️ &nbsp;Quiero el Menú Sin Estrés
+        </a>
+        <span class="btn-sub">12,90 € · Pago único · Acceso para siempre</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <p><strong>Menú Sin Estrés</strong> &nbsp;|&nbsp; Todos los derechos reservados &copy; 2025</p>
+    <p style="margin-top:6px;">
+      <a href="#">Aviso Legal</a> &nbsp;·&nbsp;
+      <a href="#">Política de Privacidad</a> &nbsp;·&nbsp;
+      <a href="#">Política de Cookies</a>
+    </p>
+    <p style="margin-top:10px;font-size:0.76rem;color:#777;">
+      Este sitio web no está afiliado a Meta Platforms, Inc. (Facebook/Instagram).<br />
+      Los resultados individuales pueden variar. Las imágenes son de carácter ilustrativo.
+    </p>
+  </footer>
+
+  <!-- ══════════════════════════════════
+       STICKY BAR
+  ══════════════════════════════════ -->
+  <div class="sticky-bar">
+    <p>🍽️ &nbsp;Menú Sin Estrés — Todo el año planificado por solo 12,90€</p>
+    <a href="#comprar" class="btn-main">Quiero el acceso ahora</a>
+  </div>
+
+  <script>
+    // Smooth scroll para âncoras internas
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Oculta sticky bar quando estiver no pricing
+    const stickyBar = document.querySelector('.sticky-bar');
+    const pricingSection = document.querySelector('#comprar');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        stickyBar.style.display = entry.isIntersecting ? 'none' : 'flex';
+      });
+    }, { threshold: 0.3 });
+    if (pricingSection) observer.observe(pricingSection);
+  </script>
+
+</body>
+</html>
