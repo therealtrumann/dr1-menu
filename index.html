@@ -13,6 +13,24 @@
   <!-- Só os pesos usados: 300, 400, 500, 600, 700, 800 -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap"/>
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1663317268125277');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1663317268125277&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
@@ -75,7 +93,7 @@
     /* ── HERO ── */
     .hero{background:var(--w);padding:24px 16px 12px;text-align:center}
 
-    .hero .logo{max-width:200px;margin:0 auto 20px}
+    .hero .logo{max-width:480px;margin:0 auto 20px}
 
     .hero h1{
       font-size:clamp(1.55rem,5vw,2.6rem);
@@ -282,6 +300,18 @@
     }
     .p-main sup{font-size:40%;vertical-align:super;font-weight:700}
 
+    .currency-note{
+      font-size:.83rem;
+      color:#777;
+      font-style:italic;
+      margin:0 0 16px;
+      line-height:1.5;
+      padding:8px 12px;
+      background:#f9f9f9;
+      border-radius:8px;
+      border-left:3px solid var(--g);
+    }
+
     .arrow{max-width:50px;margin:0 auto 10px}
 
     .pay-img{max-width:340px;margin:18px auto 0}
@@ -463,8 +493,8 @@
 <section class="hero">
   <div class="wrap tc">
     <div class="logo">
-      <img src="https://misturasdobem.com.br/images/mss/Logo_Menu_Sem_stress_V2.png"
-           alt="Menú Sin Estrés" width="200" height="auto" fetchpriority="high"/>
+      <img src="logo.svg"
+           alt="Menú Sin Estrés — Planifica · Cocina · Disfruta" width="480" height="auto" fetchpriority="high"/>
     </div>
 
     <h1>"¿Qué hacemos hoy de comer?"<br/><span>Nunca fue tan fácil de responder.</span></h1>
@@ -658,11 +688,15 @@
       <p class="p-orig">Valor normal: $97,00</p>
       <p class="p-main"><sup>$</sup>17</p>
 
+      <p class="currency-note">
+        💱 <em>El precio se muestra en dólares. En la página de pago, el importe se convertirá automáticamente a la moneda de tu país.</em>
+      </p>
+
       <div class="arrow">
         <img src="https://misturasdobem.com.br/images/mss/V8_seta_1.png" alt="↓" loading="lazy"/>
       </div>
 
-      <a href="#" class="btn lg blk pulse">COMPRAR AHORA — ACCESO INMEDIATO</a>
+      <a href="https://pay.hotmart.com/T105566156M?off=0dinfkvl" class="btn lg blk pulse" target="_blank" rel="noopener">COMPRAR AHORA — ACCESO INMEDIATO</a>
       <span class="btn-note">Pago 100% seguro · Acceso en menos de 2 minutos</span>
 
       <div class="pay-img">
@@ -758,7 +792,7 @@
     <div class="arrow" style="filter:brightness(0) invert(1);margin-bottom:12px">
       <img src="https://misturasdobem.com.br/images/mss/seta.png" alt="↓" loading="lazy"/>
     </div>
-    <a href="#precio" class="btn lg" style="background:#fff;color:var(--o)">
+    <a href="https://pay.hotmart.com/T105566156M?off=0dinfkvl" class="btn lg" style="background:#fff;color:var(--o)" target="_blank" rel="noopener">
       COMPRAR AHORA — ACCESO INMEDIATO
     </a>
     <span class="btn-note" style="color:rgba(255,255,255,.75)">Garantía 30 días · Acceso inmediato</span>
