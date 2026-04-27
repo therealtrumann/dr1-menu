@@ -49,7 +49,8 @@
       --ts: #555;
     }
 
-    html{scroll-behavior:smooth}
+    /* Impede scroll horizontal em qualquer resolução */
+    html{scroll-behavior:smooth;overflow-x:hidden}
 
     body{
       font-family:'Barlow Semi Condensed',sans-serif;
@@ -57,6 +58,7 @@
       color:var(--t);
       background:var(--w);
       line-height:1.55;
+      overflow-x:hidden;
       /* padding-bottom para a sticky bar */
       padding-bottom:64px;
     }
@@ -67,7 +69,8 @@
     h2{font-weight:400}
     h3{font-weight:400}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
+    /* !important garante que styles inline não quebrem o mobile */
+    img{max-width:100%!important;width:100%;height:auto;display:block}
 
     .wrap{max-width:960px;margin:0 auto;padding:0 16px}
     .wrap-sm{max-width:700px;margin:0 auto;padding:0 16px}
@@ -501,10 +504,10 @@
 
     <p class="sub">Descarga ahora <strong>52 menús semanales completos</strong> con listas de la compra para todo el año.</p>
 
-    <img src="https://misturasdobem.com.br/images/mss/V6_Menu_Sem_Stress_Promessa_3.png"
-         alt="Menú Sin Estrés — promesa"
-         style="max-width:640px;margin:0 auto 22px"
-         fetchpriority="high"/>
+    <div style="max-width:640px;margin:0 auto 22px">
+      <img src="https://misturasdobem.com.br/images/mss/V6_Menu_Sem_Stress_Promessa_3.png"
+           alt="Menú Sin Estrés — promesa" fetchpriority="high"/>
+    </div>
 
     <a href="#precio" class="btn lg pulse">¡QUIERO MI MENÚ SIN ESTRÉS!</a>
     <span class="btn-note">Acceso inmediato · Sin suscripción · Válido para siempre</span>
@@ -520,10 +523,10 @@
     <h2 class="sh">Todos los días lo mismo:<br/><span>¿Qué hacemos hoy de comer?</span></h2>
     <div class="div"></div>
 
-    <img src="https://misturasdobem.com.br/images/mss/V8_Dor_Menu_Sem_Stress_2.png"
-         alt="El problema del menú diario"
-         style="max-width:580px;margin:0 auto 18px"
-         loading="lazy"/>
+    <div style="max-width:580px;margin:0 auto 18px">
+      <img src="https://misturasdobem.com.br/images/mss/V8_Dor_Menu_Sem_Stress_2.png"
+           alt="El problema del menú diario" loading="lazy"/>
+    </div>
 
     <p>Tienes que pensar cada día qué cocinar, pero te falta creatividad y siempre acabas repitiendo los mismos platos.</p>
     <p>¿Sabes por qué pasa? <strong>Porque no tienes menús listos que te guíen.</strong></p>
@@ -569,10 +572,10 @@
     <h2 class="sh">Todo lo que vas a recibir<br/>en el <span>Menú Sin Estrés:</span></h2>
     <div class="div"></div>
 
-    <img src="https://misturasdobem.com.br/images/mss/V8_Menu_Sem_Stress_3_4.png"
-         alt="Contenido del producto"
-         style="max-width:540px;margin:0 auto 24px"
-         loading="lazy"/>
+    <div style="max-width:540px;margin:0 auto 24px">
+      <img src="https://misturasdobem.com.br/images/mss/V8_Menu_Sem_Stress_3_4.png"
+           alt="Contenido del producto" loading="lazy"/>
+    </div>
 
     <div class="dlist">
       <div class="dc">
